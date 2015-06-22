@@ -18,7 +18,7 @@ public class CustomFilter implements Filter {
 			FilterChain fc) throws IOException, ServletException {
 		// TODO Auto-generated method stub
         HttpServletRequest httpreq=(HttpServletRequest) req;
-        System.out.println("CustomFilter.doFilter invoked for requestURI:"+httpreq.getRequestURI());
+        System.out.println("CustomFilter.dddddoFilter invoked for requestURI:"+httpreq.getRequestURI());
         res.setContentType(contentType);
         fc.doFilter(req, res);
 	}

@@ -6,7 +6,7 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 
 <display-name>JavaWeb</display-name>
 <description>Web Test</description>
-<metadata-complete>false</metadata-complete>
+<!-- <metadata-complete>false</metadata-complete> -->
 <servlet>
   <servlet-name>helloworld</servlet-name>
   <servlet-class>com.xinglongjian.servlet.HelloWorldServlet</servlet-class>

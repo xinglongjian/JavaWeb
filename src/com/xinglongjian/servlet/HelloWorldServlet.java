@@ -25,8 +25,9 @@ public class HelloWorldServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
 		ServletContext sc=getServletContext();
-		sc.setAttribute("foo", "2222");
+		sc.setAttribute("foo", "23222");
 		
 		resp.setContentType("text/html");
 		PrintWriter out=resp.getWriter();
@@ -36,7 +37,14 @@ public class HelloWorldServlet extends HttpServlet{
 		out.println("</head>");
 		out.println("<body>");
 		out.println("<h1>HelloWorld</h1>");
-		out.print("<h2>"+sc.getAttribute("foo")+"</h2>");
+		out.println("<h2>dddd"+sc.getAttribute("foo"));
+//		out.println("getServletInfo:"+this.getServletInfo());
+//		out.println("getServletName:"+this.getServletName());
+//		out.println("getInitParameterNames:"+this.getInitParameterNames());
+//		out.println("getServletConfig:"+this.getServletConfig());
+//		out.println("getServletContext:"+this.getServletContext());
+//		out.println("getInitParameter:"+this.getInitParameter("message"));
+		out.println("</h2>");
 		out.println("</body>");
 		out.println("</html>");
 	}
