@@ -33,7 +33,7 @@ public class AnnotationServlet extends HttpServlet {
 		out.println("</head>");
 		out.println("<body>");
 		out.println("<h1>"+this.message+"</h1>");
-		out.print("<h2>"+sc.getAttribute("foo")+"</h2>");
+//		out.print("<h2>"+sc.getAttribute("foo")+"</h2>");
 		out.println("</body>");
 		out.println("</html>");
 		

@@ -33,7 +33,7 @@ public class CustomFilter implements Filter {
 	public void init(FilterConfig config) throws ServletException {
 		// TODO Auto-generated method stub
 		this.contentType=config.getInitParameter("contentType");
-		System.out.println("Filter initialized.");
+		System.out.println("Filter initialized.vvvv");
 
 	}
 
