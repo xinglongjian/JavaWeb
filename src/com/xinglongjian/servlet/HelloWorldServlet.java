@@ -19,6 +19,7 @@ public class HelloWorldServlet extends HttpServlet{
 		// TODO Auto-generated method stub
 		super.init(config);
 		this.message=config.getInitParameter("message");
+		System.out.println("helloword init");
 	}
 
 	@Override
@@ -28,7 +29,7 @@ public class HelloWorldServlet extends HttpServlet{
 		
 		ServletContext sc=getServletContext();
 		sc.setAttribute("foo", "23222");
-		
+		System.out.println("dddddddddddd");
 		resp.setContentType("text/html");
 		PrintWriter out=resp.getWriter();
 		out.println("<html>");
@@ -36,15 +37,14 @@ public class HelloWorldServlet extends HttpServlet{
 		out.println("<title>"+this.message+"</title>");
 		out.println("</head>");
 		out.println("<body>");
-		out.println("<h1>Hello dsdsd  World</h1>");
-		out.println("<h2>dddd"+sc.getAttribute("foo"));
-		out.println("getServletInfo:"+this.getServletInfo());
-		out.println("getServletName:"+this.getServletName());
-		out.println("getInitParameterNames:"+this.getInitParameterNames());
-		out.println("getServletConfig:"+this.getServletConfig());
-		out.println("getServletContext:"+this.getServletContext());
-		out.println("getInitParameter:"+this.getInitParameter("message"));
-		out.println("</h2>");
+		out.println("<h1>Hello  World</h1>");
+		out.println("<h2>"+sc.getAttribute("foo")+"</h2>");
+		out.println("<h2>getServletInfo:"+this.getServletInfo()+"</h2>");
+		out.println("<h2>getServletName:"+this.getServletName()+"</h2>");
+		out.println("<h2>getInitParameterNames:"+this.getInitParameterNames().toString()+"</h2>");
+		out.println("<h2>getServletConfig:"+this.getServletConfig()+"</h2>");
+		out.println("<h2>getServletContext:"+this.getServletContext().getContextPath()+"</h2>");
+		out.println("<h2>getInitParameter:"+this.getInitParameter("message")+"</h2>");
 		out.println("</body>");
 		out.println("</html>");
 	}
