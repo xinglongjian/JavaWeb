@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.catalina.loader.StandardClassLoader;
 import org.apache.catalina.loader.WebappClassLoader;
 
 import sun.net.spi.nameservice.dns.DNSNameService;
@@ -34,7 +33,6 @@ public class HelloWorldServlet extends HttpServlet{
 		ServletContext sc=getServletContext();
 		sc.setAttribute("foo", "23222");
 		System.out.println("dddddddddddd");
-		StandardClassLoader d;
 		WebappClassLoader sd;
 		resp.setContentType("text/html");
 		PrintWriter out=resp.getWriter();
